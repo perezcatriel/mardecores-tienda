@@ -1,11 +1,10 @@
 FROM wordpress:latest
 
-# Instalar el plugin PG4WP
+# Instalar el plugin WPPG
 RUN apt-get update && apt-get install -y wget unzip \
-    && wget https://github.com/kevinoid/postgresql-for-wordpress/archive/refs/heads/master.zip -O pg4wp.zip \
-    && unzip pg4wp.zip -d /usr/src/wordpress/wp-content/plugins/ \
-    && mv /usr/src/wordpress/wp-content/plugins/postgresql-for-wordpress-master /usr/src/wordpress/wp-content/plugins/postgresql-for-wordpress \
-    && rm pg4wp.zip \
+    && wget [URL_DEL_PLUGIN_WPPG] -O wppg.zip \
+    && unzip wppg.zip -d /usr/src/wordpress/wp-content/plugins/ \
+    && rm wppg.zip \
     && apt-get remove --purge -y wget unzip \
     && apt-get autoremove -y
 
