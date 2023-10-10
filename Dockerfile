@@ -1,4 +1,3 @@
-# Usar la imagen oficial de WordPress
 FROM wordpress:latest
 
 # Instalar dependencias necesarias
